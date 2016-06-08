@@ -1,0 +1,16 @@
+automationFramework\PageObjects\SignInPage.class
+automationFramework\Utilities\Logging.class
+automationFramework\PageObjects\DashboardPage.class
+automationFramework\PageObjects\NewCustomerPage.class
+automationFramework\Utilities\Robots.class
+automationFramework\PageObjects\BasePage.class
+automationFramework\PageObjects\NewCustomerPageTwo.class
+automationFramework\DAO\PostgresAutomation.class
+automationFramework\PageObjects\SearchPage.class
+automationFramework\DAO\MongoAutomation.class
+automationFramework\TestCases\CmcTest.class
+automationFramework\PageObjects\NewCustomerPageThree.class
+automationFramework\Utilities\Global.class
+automationFramework\PageObjects\CreateFundingPage.class
+automationFramework\Utilities\Utils.class
+CompassAutomation\AutomationFramework\AppTest.class

@@ -1,0 +1,12 @@
+<suite name="Automation - Suite" >
+	<test name ="FirefoxTest">
+	<parameter name="browser" value="firefox.exe" />
+		<classes>
+		    <class name="automationFramework.TestCases.CmcTest" />
+		</classes>
+	</test>
+		<listeners>
+       <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+</suite>

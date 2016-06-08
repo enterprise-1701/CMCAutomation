@@ -1,0 +1,158 @@
+package automationFramework.PageObjects;
+
+
+import java.awt.AWTException;
+import java.io.IOException;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
+
+import com.gargoylesoftware.htmlunit.WebClient;
+
+import automationFramework.Utilities.Global;
+import automationFramework.Utilities.Utils;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class BasePage {
+	
+	// Element Locators
+	        private static final String LAUNCH_PAD = "//*[@class='fa fa-rocket fa-lg cmc-main-icon']"; 
+			private static final String NEXT_CONTACT = "//*[@class='fa fa-user fa-lg cmc-main-icon']";	
+			private static final String WORKSPACE = "//*[@class='fa fa-desktop fa-lg cmc-main-icon']";
+			private static final String SWITCH = "/html/body/div/div/div/customer/a/i";
+			private static final String CREATE = "//*[@id='mySidenav']/a[2]/font";
+			private static final String SEARCH = "//*[@id='mySidenav']/a[1]/font";
+			private static final String IFRAME_SEARCH = "//*[@id='cmc-tab-panel']/tab[2]/div/div/iframe";
+			private static final String NEXTFARE = ".//*[@id='header_nextfare_btn']";
+			private static final String ABP = ".//*[@id='header_abp_btn']";
+			private static final String PAYMENTAPP = ".//*[@id='header_paymentParent_btn']";
+			private static final String PRODUCTCAT = ".//*[@id='header_prodcat_btn']";
+			private static final String FINANCE = ".//*[@id='header_financeParent_btn']";
+			private static final String REPORTS = ".//*[@id='header_sapEdge_btn']";
+			private static final String CUSTOMER = "//*[@id='launchPad_customer_btn']/h4";
+			private static final String MONITORING = ".//*[@id='header_monitoringParent_btn']";
+			
+		
+	public static WebDriver driver;
+	//WebDriverWait wait = new WebDriverWait(driver, 15, 100);
+	
+
+	public BasePage(WebDriver driver) {
+		BasePage.driver = driver;
+	}
+	
+	public void getLandingPage(String url) throws Exception {
+		try{
+			driver.get(url);		
+		} catch (Exception e) {
+			Reporter.log("landing page not Found");
+			throw (e);
+		}
+	}
+	
+	public void clickLpad(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(LAUNCH_PAD)).click();
+	}
+	
+	public void clickNextContact(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(NEXT_CONTACT)).click();
+	}
+	
+	public void clickWorkSpace(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(WORKSPACE)).click();
+	}
+	
+	public void clickSwitch(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(SWITCH)).click();
+	}
+	
+	public void clickCreateCustomer(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(CREATE)).click();
+	}
+	
+	public void clickSearch(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(SEARCH)).click();
+	}
+	
+	public void switchToFrame(WebDriver driver) throws InterruptedException, AWTException{
+		driver.switchTo().frame(driver.findElement(By.xpath(IFRAME_SEARCH)));
+	}
+	
+	public void clickNextfare(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(NEXTFARE)).click();
+	}
+	
+	public void clickPaymentAppPal(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(NEXTFARE)).sendKeys("PAL");	
+	}
+	
+	public void clickPaymentAppCpa(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(NEXTFARE)).sendKeys("CPA");		
+	}
+	
+	public void clickProductCat(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(PRODUCTCAT)).click();
+	}
+	
+	public void clickFinance(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(FINANCE)).click();
+	}
+	
+	public void clickReports(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(REPORTS)).click();
+	}
+	
+	public void clickCustomer(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(CUSTOMER)).click();
+	}
+	
+	public void clickMonitor(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(MONITORING)).click();
+	}
+	
+	public void clickAbp(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(ABP)).click();
+	}
+	
+	public String getCookie(String cookie) {
+		driver.get(Global.URL1);
+		Set<Cookie> cookies = driver.manage().getCookies();
+		Cookie UID = driver.manage().getCookieNamed(cookie);
+		return UID.getValue();
+	}
+	
+	public static int getStatusCode(long appUserId) throws IOException {
+		WebClient webClient = new WebClient();
+		int code = webClient.getPage(Global.URL1).getWebResponse().getStatusCode();
+		return code;
+	}
+	
+	public static String getPageContent() throws IOException {
+		WebClient webClient = new WebClient();
+		String content = webClient.getPage(Global.URL1).getWebResponse().getContentAsString();
+		return content;
+	}
+	
+	public static void checkLinks(WebDriver driver) throws Exception {
+		
+		 List<WebElement> links=driver.findElements(By.tagName("a"));
+	     System.out.println("total number of links: " +links.size());
+	     
+	     for (int i=0; i<links.size();i++){
+	    	 if(!(links.get(i).getText().isEmpty())){
+	    		
+	    			 links.get(i).click();
+	    			 driver.navigate().back();
+	    			 links=driver.findElements(By.tagName("a"));    		 
+	    	 }
+	     }  	
+	 }	     
+}
