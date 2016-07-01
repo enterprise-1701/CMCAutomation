@@ -33,6 +33,7 @@ public class SearchPage extends BasePage {
 	private static final String SEARCH = ".//*[@id='searchCustomer_search_btn']";
 	private static final String NORECORD = "html/body/div[1]/div/div/customer/search-customer/fieldset/div/div/div[2]/customer-contacts/p-panel/div/div[2]/p";
 	private static final String FIRSTRECORD = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr[1]/td[1]/span";
+	private static final String SECONDRECORD = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr[2]/td[1]/span";
 	private static final String LEGEND = "//*[@id='Create Customer_legend']";
 	private static final String FNAMETABLE = ".//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr[1]/td[1]/span";
 	private static final String LNAMETABLE = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr[1]/td[2]/span";
@@ -40,8 +41,9 @@ public class SearchPage extends BasePage {
 	private static final String PHONETABLE = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr/td[4]/span/span";
 	private static final String ADDRESSTABLE = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr/td[5]/span/span";
 	private static final String DOBTABLE = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr/td[6]/span/span";
-	private static final String CUSTOMERTABLE = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr/td[7]/span/span";
-	private static final String CONTACTTABLE = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr/td[8]/span";
+	private static final String CUSTOMERTABLE = "//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr[1]/td[7]/span";											
+	private static final String CONTACTTABLE = ".//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr[1]/td[8]/span";
+	private static final String CONTACTTABLE_TWO = ".//*[@id='customerContacts_list_tbl']/div/div[1]/table/tbody/tr/td[7]/span";
 	private static final String SECURITYQBOX = "//*[@id='verificationForm_securityQA_chk']";
 	private static final String CONTINUE = "//*[@id='verificationForm_verified_btn']";
 	private static final String NOTVERIFIED = "//*[@id='verificationForm_notVerified_btn']";
@@ -84,6 +86,11 @@ public class SearchPage extends BasePage {
 	public void clickRecord(WebDriver driver) throws InterruptedException, AWTException{
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(FIRSTRECORD)));
 		driver.findElement(By.xpath(FIRSTRECORD)).click();
+	}
+	
+	public void clickSecondRecord(WebDriver driver) throws InterruptedException, AWTException{
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SECONDRECORD)));
+		driver.findElement(By.xpath(SECONDRECORD)).click();
 	}
 	
 	public void clickSecurityBox(WebDriver driver) throws InterruptedException, AWTException{
@@ -137,6 +144,10 @@ public class SearchPage extends BasePage {
 	
 	public String getContactType(WebDriver driver) throws InterruptedException, AWTException{
 		return driver.findElement(By.xpath(CONTACTTABLE)).getText();
+	}
+	
+	public String getContactTypeTableTwo(WebDriver driver) throws InterruptedException, AWTException{
+		return driver.findElement(By.xpath(CONTACTTABLE_TWO)).getText();
 	}
 	
 	public String getEmailError(WebDriver driver) throws InterruptedException, AWTException{

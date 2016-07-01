@@ -29,17 +29,18 @@ public class CreateFundingPage extends BasePage {
 		private static final String MONTH_EXP = "//*[@id='fundingSourceForm_cardExpiryMM_sel']";
 		private static final String YEAR_EXP = "//*[@id='fundingSourceForm_cardExpiryYYYY_sel']";
 		
+		
 		private static final String ISPRIMARY = "//*[@id='fundingSourceForm_isPrimary_chk']";
 		private static final String ISRECURRING = "//*[@id='fundingSourceForm_isRecurring_chk']";
 		private static final String BILLING_ADDRESS_BOX = "//*[@id='fundingSourceForm_isBillingAddressSame_chk']";
 		private static final String SUBMIT = "//*[@id='fundingSourceForm_submit_btn']";
 		private static final String CANCEL = "//*[@id='searchCustomer_cancel_btn']";
-		private static final String T_NAMEONCARD = ".//*[@id='fundingSources_list_tbl']/div/div/table/tbody/tr/td[1]/span/span";
-		private static final String T_CARDTYPE = ".//*[@id='fundingSources_list_tbl']/div/div/table/tbody/tr/td[2]/span/span";
+		private static final String T_NAMEONCARD = "//*[@id='fundingSources_list_tbl']/div/div[1]/table/tbody/tr/td[1]/span";
+		private static final String T_CARDTYPE = "//*[@id='fundingSources_list_tbl']/div/div[1]/table/tbody/tr/td[2]";
 		private static final String T_CARDNUMBER = ".//*[@id='fundingSources_list_tbl']/div/div/table/tbody/tr/td[3]/span/span";
-		private static final String T_CARDEXPIRATION =  ".//*[@id='fundingSources_list_tbl']/div/div/table/tbody/tr/td[4]/span/span";
-		private static final String T_CARDSTATUS = ".//*[@id='fundingSources_list_tbl']/div/div/table/tbody/tr/td[5]/span/span";
-		private static final String T_BILLING_ADDRESS =  ".//*[@id='fundingSources_list_tbl']/div/div/table/tbody/tr/td[8]/span/span";
+		private static final String T_CARDEXPIRATION =  "//*[@id='fundingSources_list_tbl']/div/div[1]/table/tbody/tr/td[4]/span/span";										
+		private static final String T_CARDSTATUS = "//*[@id='fundingSources_list_tbl']/div/div[1]/table/tbody/tr/td[5]/span/span";											
+		private static final String T_BILLING_ADDRESS =  "//*[@id='fundingSources_list_tbl']/div/div[1]/table/tbody/tr/td[8]/span/span";
 		private static final String COUNTRY = "//*[@id='fundingSourceForm_countryId_sel']";
 		private static final String NEW_BILLINGADDRESS = "//*[@id='fundingSourceForm_address1_txt']";
 		private static final String CITY = "//*[@id='fundingSourceForm_city_txt']";
@@ -47,7 +48,7 @@ public class CreateFundingPage extends BasePage {
 		private static final String POSTAL = "//*[@id='fundingSourceForm_postalCode_txt']";
 		private static final String T_NEWBILLINGADDRESS = ".//*[@id='addresses_list_tbl']/div/div[1]/table/tbody/tr[1]/td[1]/span";
 		private static final String T_NEWCITY = ".//*[@id='addresses_list_tbl']/div/div[1]/table/tbody/tr[1]/td[3]/span";
-		private static final String T_NEWSTATE = ".//*[@id='addresses_list_tbl']/div/div[1]/table/tbody/tr[1]/td[4]/span/span";
+		private static final String T_NEWSTATE = "//*[@id='addresses_list_tbl']/div/div[1]/table/tbody/tr/td[4]/span";
 		private static final String T_NEWPOSTAL = ".//*[@id='addresses_list_tbl']/div/div[1]/table/tbody/tr[1]/td[5]/span";
 		private static final String CREATE_CONTACT = ".//*[@id='viewCustomer_createContact_lnk']";
 		
@@ -91,9 +92,8 @@ public class CreateFundingPage extends BasePage {
 	}
 	
 	public void selectYear(WebDriver driver) throws InterruptedException, AWTException{
-		driver.findElement(By.xpath(YEAR_EXP)).click();
 		Select mySelect= new Select(driver.findElement(By.xpath(YEAR_EXP)));
-		mySelect.selectByIndex(4);
+		mySelect.selectByIndex(5);
 	}
 	
 	public void selectCountry(WebDriver driver) throws InterruptedException, AWTException{
@@ -173,4 +173,5 @@ public class CreateFundingPage extends BasePage {
 	public boolean isSubmitEnabled(WebDriver driver) throws InterruptedException, AWTException{
 		return driver.findElement(By.xpath(SUBMIT)).isEnabled();
 		}
+	
 }

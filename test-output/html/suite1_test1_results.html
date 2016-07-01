@@ -12,91 +12,488 @@
 <body>
 <h1>FirefoxTest</h1>
 <p>
-  Test duration: 89.319s
+  Test duration: 863.528s
 </p>
 
 
 
+
+
   <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">automationFramework.TestCases.CmcTest</td>
+        <td colspan="3" class="group">automationFramework.TestCases.BalanceHistoryTest</td>
       </tr>
             
 <tr>
   <td class="method">
-                  createFundingSource
+                  checkBalanceHistory
       </td>
   <td class="duration">
-    84.051s
+    22.299s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]&quot;}<br/>
-Command duration or timeout: 60.27 seconds<br/>
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;<br/>
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;<br/>
-Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
-Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=32.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]<br/>
-Session ID: 9ecfa385-aecf-4122-bf6a-fc9d3e6691ce<br/>
-*** Element info: {Using=xpath, value=.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]}</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br />
-              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)<br />
-              java.lang.reflect.Constructor.newInstance(Unknown Source)<br />
-              org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)<br />
-              org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)<br />
-              org.openqa.selenium.By$ByXPath.findElement(By.java:357)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)<br />
-              automationFramework.PageObjects.NewCustomerPageThree.clickFundingSource(NewCustomerPageThree.java:96)<br />
-              automationFramework.TestCases.CmcTest.createFundingSource(CmcTest.java:192)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:767)<br />
-              org.testng.TestRunner.run(TestRunner.java:617)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:240)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br />
-              org.testng.TestNG.run(TestNG.java:1031)<br />
-              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
-              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)<br />
-              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)<br />
-                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]&quot;}<br/>
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;<br/>
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;<br/>
-Driver info: driver.version: unknown</a><br />
-        <div class="stackTrace" id="exception-1">
-                      &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10271)<br />
-                      &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:603)<br />
-                  </div>
-          </div>
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">automationFramework.TestCases.CreateCustomerTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  createCustomerCancel
+      </td>
+  <td class="duration">
+    19.456s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerContactTypeNotSelected
+      </td>
+  <td class="duration">
+    27.695s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerEmailMissing
+      </td>
+  <td class="duration">
+    14.619s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerFundingInvalidCC
+      </td>
+  <td class="duration">
+    18.521s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerInvalidEmail
+      </td>
+  <td class="duration">
+    25.539s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerInvalidPhone
+      </td>
+  <td class="duration">
+    11.880s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerInvalidPin
+      </td>
+  <td class="duration">
+    22.671s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerInvalidUserName
+      </td>
+  <td class="duration">
+    19.225s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerNameMissing
+      </td>
+  <td class="duration">
+    9.861s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createNewCustomer
+      </td>
+  <td class="duration">
+    33.336s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">automationFramework.TestCases.CreateFundingTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  createCustomerFundingInvalidCC
+      </td>
+  <td class="duration">
+    27.063s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createCustomerInvalidEmail
+      </td>
+  <td class="duration">
+    21.484s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createFundingSource
+      </td>
+  <td class="duration">
+    39.692s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createFundingSourceCancel
+      </td>
+  <td class="duration">
+    20.973s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createFundingSourceNewBillingAddress
+      </td>
+  <td class="duration">
+    45.509s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  createFundingSourceTypeNotSelected
+      </td>
+  <td class="duration">
+    19.630s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">automationFramework.TestCases.EmailTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  checkEmailNewCustomer
+      </td>
+  <td class="duration">
+    37.712s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">automationFramework.TestCases.LinkAccountTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  linkAccountBankNumberMissingTest
+      </td>
+  <td class="duration">
+    24.509s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  linkAccountCancelTest
+      </td>
+  <td class="duration">
+    27.649s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  linkAccountCardExpirationMissingTest
+      </td>
+  <td class="duration">
+    21.273s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">automationFramework.TestCases.SearchTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  searchCustomerCheckDuplicateTestAll
+      </td>
+  <td class="duration">
+    19.660s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerCheckDuplicateTestEmail
+      </td>
+  <td class="duration">
+    16.623s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerCheckDuplicateTestEmailPhone
+      </td>
+  <td class="duration">
+    16.149s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerCheckDuplicateTestFname
+      </td>
+  <td class="duration">
+    14.602s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerCheckDuplicateTestFnameLname
+      </td>
+  <td class="duration">
+    15.792s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerCheckDuplicateTestLname
+      </td>
+  <td class="duration">
+    14.596s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerCheckDuplicateTestPhone
+      </td>
+  <td class="duration">
+    17.001s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerInvalidEmail
+      </td>
+  <td class="duration">
+    11.359s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerNoResultsTest
+      </td>
+  <td class="duration">
+    12.392s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerNotVerifiedTest
+      </td>
+  <td class="duration">
+    19.435s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchCustomerTypeNotSelected
+      </td>
+  <td class="duration">
+    9.196s
+  </td>
+  <td class="result">
+        
+    
+        
+
       </td>
 </tr>
       </table>
-
-
   
 </body>
 </html>

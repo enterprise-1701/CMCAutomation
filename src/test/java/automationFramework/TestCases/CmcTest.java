@@ -18,7 +18,7 @@ public class CmcTest {
 
 	private static Logger Log = Logger.getLogger(Logger.class.getName());
 	private static final String NORECORD = "No records found.";
-	private static final String DOB = "17-05-1987";
+	private static final String DOB = "19-05-2016";
 	private static final String CRTYPE = "Individual";
 	private static final String CTYPE = "Primary";
 	private static final String STATE = "California";
@@ -46,9 +46,11 @@ public class CmcTest {
 	}
 
 	
-	@Test(priority=1 , enabled=true)
+	@Test(priority=20 , enabled=false)
 	public void searchCustomerVerifiedTest()throws Exception{
 	
+		coreTest.getLabStatus(driver);
+		coreTest.signIn(driver);
 	    SearchPage sPage = getSearchPage();
 		sPage.clickCustomerType(driver, "Individual");
 		sPage.enterFirstname(driver, Global.FNAME);
@@ -86,10 +88,8 @@ public class CmcTest {
 		Log.info("Actual results " +  sPage.getPhone(driver) + " matches " +  Global.PHONE);
 		Assert.assertEquals(sPage.getDob(driver),  DOB);
 		Log.info("Actual results " +  sPage.getDob(driver) + " matches " +  DOB);
-		Assert.assertEquals(sPage.getCustomerType(driver),  CRTYPE);
-		Log.info("Actual results " +  sPage.getCustomerType(driver) + " matches " +  CRTYPE);
-		Assert.assertEquals(sPage.getContactType(driver),  CTYPE);
-		Log.info("Actual results " +  sPage.getContactType(driver) + " matches " +  CTYPE);
+		Assert.assertEquals(sPage.getContactTypeTableTwo(driver),  CTYPE);
+		Log.info("Actual results " +  sPage.getContactTypeTableTwo(driver) + " matches " +  CTYPE);
 		Assert.assertEquals(sPage.getAddress(driver).substring(0, 12),  Global.ADDRESS);
 		Log.info("Actual results " + sPage.getAddress(driver).substring(0, 12)  + " matches " +  Global.ADDRESS);
 		driver.close();
@@ -100,6 +100,7 @@ public class CmcTest {
 	@Test(priority=2 , enabled=false)
 	public void searchCustomerNotVerifiedTest()throws Exception{
 		
+		coreTest.signIn(driver);
 		SearchPage sPage = getSearchPage();
 		sPage.clickCustomerType(driver, "Individual");
 		sPage.enterFirstname(driver, Global.FNAME);
@@ -110,8 +111,8 @@ public class CmcTest {
 		Utils.waitTime(5000);
 		sPage.clickRecord(driver);
 		sPage.clickNotVerified(driver);	
-		Assert.assertFalse(sPage.isLegendPresent(driver), "customer undefined is not being displayed!");
-		//Assert.assertFalse(sPage.isRecordPresent(driver), "customer records should not be displayed!");	
+		Utils.waitTime(30000);
+		Assert.assertFalse(sPage.isRecordPresent(driver), "customer records should not be displayed!");	
 		driver.close();
 		    	
 	}
@@ -120,11 +121,12 @@ public class CmcTest {
 	@Test(priority=3 , enabled=false)
 	public void searchCustomerNoResultsTest()throws Exception{
 	
+		coreTest.signIn(driver);
 		SearchPage sPage = getSearchPage();
 		sPage.clickCustomerType(driver, "Individual");
 		sPage.enterFirstname(driver, Global.FNAME2);
 		sPage.enterLastname(driver, Global.LNAME2);
-		sPage.enterEmail(driver, Global.EMAIL2);
+		sPage.enterEmail(driver, Global.EMAIL);
 		sPage.enterPhone(driver, Global.PHONE2);
 		sPage.clickSearch(driver);
 		Assert.assertEquals(sPage.getNoRecordFound(driver),  NORECORD);
@@ -136,7 +138,6 @@ public class CmcTest {
 	@Test(priority=4 , enabled=false)
 	public void searchCustomerTypeNotSelected()throws Exception{
 		
-		coreTest.getLabStatus(driver);
 		coreTest.signIn(driver);
 		DashboardPage dashPage = new DashboardPage(driver);
 		dashPage.clickCustomerTab(driver);
@@ -147,28 +148,43 @@ public class CmcTest {
 		    	
 	}
 	
+	@Test(priority=17 , enabled=false)
+	public void searchCustomerInvalidEmail() throws Exception{
+		
+		coreTest.signIn(driver);
+		SearchPage sPage = getSearchPage();
+		sPage.clickCustomerType(driver, "Individual");
+		sPage.enterFirstname(driver, Global.FNAME);
+		sPage.enterLastname(driver, Global.LNAME);
+		sPage.enterEmail(driver, Global.FNAME);
+		Assert.assertEquals(sPage.getEmailError(driver), Global.INVALID_EMAIL);
+		Assert.assertFalse(sPage.isSearchEnabled(driver), "Search button should not be enabled!");
+		driver.close();
+	
+	}
+	
 
-	@Test(priority=5 , enabled=false)
+	@Test(priority=1 , enabled=true)
 	public void createNewCustomer() throws Exception{
 		
 		coreTest.getLabStatus(driver);
 		coreTest.signIn(driver);
 	    coreTest.createCustomer(driver);  
-        NewCustomerPageThree nPage3 = new NewCustomerPageThree(driver);
+        NewCustomerDisplayPage nPage3 = new NewCustomerDisplayPage(driver);
         Assert.assertEquals(nPage3.getFname(driver),  Global.FNAME);
 		Log.info("Actual results " + nPage3.getFname(driver)  + " matches expected results " +  Global.FNAME);
 		Assert.assertEquals(nPage3.getLname(driver),  Global.LNAME);
 		Log.info("Actual results " + nPage3.getLname(driver)  + " matches expected results " +  Global.LNAME);
-		Assert.assertEquals(nPage3.getEmail(driver), email);
-		Log.info("Actual results " + nPage3.getEmail(driver)  + " matches expected results " +  email);
-		Assert.assertEquals(nPage3.getPhone(driver),  phoneNumber);
-		Log.info("Actual results " + nPage3.getPhone(driver)  + " matches expected results " +  phoneNumber);
+		//Assert.assertEquals(nPage3.getEmail(driver), email);
+		//Log.info("Actual results " + nPage3.getEmail(driver)  + " matches expected results " +  email);
+		//Assert.assertEquals(nPage3.getPhone(driver),  phoneNumber);
+		//Log.info("Actual results " + nPage3.getPhone(driver)  + " matches expected results " +  phoneNumber);
 		Assert.assertEquals(nPage3.getAddress1(driver),  Global.ADDRESS);
 		Log.info("Actual results " + nPage3.getAddress1(driver)  + " matches expected results " +  Global.ADDRESS);
 		Assert.assertEquals(nPage3.getAddress(driver).substring(0, 12),  Global.ADDRESS);
 		Log.info("Actual results " + nPage3.getAddress(driver).substring(0, 12)  + " matches " +  Global.ADDRESS);
 		Assert.assertEquals(nPage3.getDob(driver),  DOB);
-		Log.info("Actual results " + nPage3.getDob(driver)  + " matches expected results " +  DOB);
+		Log.info("Actual results " + nPage3.getDob(driver)  + " matches expected results " + DOB);
 		Assert.assertEquals(nPage3.getCustomerType(driver),  Global.CUSTOMERTYPE);
 		Log.info("Actual results " + nPage3.getCustomerType(driver)  + " matches expected results " +  Global.CUSTOMERTYPE);
 		Assert.assertEquals(nPage3.getContactType(driver),  Global.CONTACTTYPE);
@@ -183,12 +199,12 @@ public class CmcTest {
 	}
 	
 	
-	@Test(priority=6 , enabled=false)
+	@Test(priority=12 , enabled=false)
 	public void createFundingSource() throws Exception{
 		
 		coreTest.signIn(driver);
 		coreTest.createCustomer(driver);
-        NewCustomerPageThree nPage3 = new NewCustomerPageThree(driver);
+        NewCustomerDisplayPage nPage3 = new NewCustomerDisplayPage(driver);
         nPage3.clickFundingSource(driver);
         CreateFundingPage cPage = new CreateFundingPage(driver);
         cPage.selectPaymentType(driver);
@@ -199,8 +215,6 @@ public class CmcTest {
         cPage.clickSubmit(driver);
         Utils.waitTime(5000);
         
-        //Assert.assertEquals(cPage.getCCname(driver),  Global.CCNAME);
-      	//Log.info("Actual results " + cPage.getCCname(driver)  + " matches expected results " +  Global.CCNAME);
       	Assert.assertEquals(cPage.getCardType(driver),  Global.CCTYPE);
       	Log.info("Actual results " +  cPage.getCardType(driver) + " matches expected results " +  Global.CCTYPE);
       	Assert.assertEquals(cPage.getCardNumber(driver),  Global.CCMASKED);
@@ -221,7 +235,7 @@ public class CmcTest {
 		
 		coreTest.signIn(driver);
 		coreTest.createCustomer(driver);
-        NewCustomerPageThree nPage3 = new NewCustomerPageThree(driver);
+        NewCustomerDisplayPage nPage3 = new NewCustomerDisplayPage(driver);
         nPage3.clickFundingSource(driver);
         CreateFundingPage cPage = new CreateFundingPage(driver);
         cPage.selectPaymentType(driver);
@@ -274,7 +288,7 @@ public class CmcTest {
 		sPage.clickRecord(driver);
 		sPage.clickSecurityBox(driver);
 		sPage.clickContiune(driver);
-		NewCustomerPageThree nPage3 = new NewCustomerPageThree(driver);
+		NewCustomerDisplayPage nPage3 = new NewCustomerDisplayPage(driver);
         nPage3.clickFundingSource(driver);
         CreateFundingPage cPage = new CreateFundingPage(driver);
         cPage.selectPaymentType(driver);
@@ -296,7 +310,7 @@ public class CmcTest {
 		dashPage.getLandingPage(Global.URL1);
 		dashPage.clickCustomerTab(driver);
 		dashPage.switchToFrame(driver);
-		NewCustomerPage nPage = new NewCustomerPage(driver);
+		CreateCustomerPage nPage = new CreateCustomerPage(driver);
 		nPage.clickSwitch(driver);
 		nPage.clickCreateCustomer(driver);
 		nPage.clickCustomerType(driver, Global.CUSTOMERTYPE);
@@ -313,7 +327,7 @@ public class CmcTest {
 		phoneNumber = Utils.randomPhoneNumber();
 		nPage.enterPhone(driver, phoneNumber);
 		nPage.clickContinue(driver);
-		NewCustomerPageTwo nPaget = new NewCustomerPageTwo(driver);
+		NewCustomerPage nPaget = new NewCustomerPage(driver);
 		nPaget.clickCancel(driver);
 		Assert.assertEquals(nPage.getFirstname(driver), "");   
 		driver.close();
@@ -323,7 +337,7 @@ public class CmcTest {
 	public void createCustomerContactTypeNotSelected()throws Exception{
 		
 		coreTest.signIn(driver);
-		NewCustomerPageTwo nPage = createCustomerFirstPage();
+		NewCustomerPage nPage = createCustomerFirstPage();
 		nPage.selectCountry(driver);
         nPage.enterAddress(driver, Global.ADDRESS );
         nPage.enterCity(driver, Global.CITY);
@@ -351,7 +365,7 @@ public class CmcTest {
 		sPage.clickRecord(driver);
 		sPage.clickSecurityBox(driver);
 		sPage.clickContiune(driver);
-		NewCustomerPageThree nPage3 = new NewCustomerPageThree(driver);
+		NewCustomerDisplayPage nPage3 = new NewCustomerDisplayPage(driver);
         nPage3.clickFundingSource(driver);
         CreateFundingPage cPage = new CreateFundingPage(driver);
         cPage.enterName(driver, Global.CCNAME );
@@ -371,7 +385,7 @@ public class CmcTest {
 		dashPage.getLandingPage(Global.URL1);
 		dashPage.clickCustomerTab(driver);
 		dashPage.switchToFrame(driver);
-		NewCustomerPage nPage = new NewCustomerPage(driver);
+		CreateCustomerPage nPage = new CreateCustomerPage(driver);
 		nPage.clickSwitch(driver);
 		nPage.clickCreateCustomer(driver);
 		nPage.clickCustomerType(driver, Global.CUSTOMERTYPE);
@@ -383,7 +397,7 @@ public class CmcTest {
 		nPage.enterEmail(driver, Utils.randomEmailString());
 		nPage.enterPhone(driver, Utils.randomPhoneNumber());
 		nPage.clickContinue(driver);
-		NewCustomerPageTwo nPaget = new NewCustomerPageTwo(driver);
+		NewCustomerPage nPaget = new NewCustomerPage(driver);
 		nPaget.selectContactType(driver, Global.CONTACTTYPE);
 		nPaget.selectCountry(driver);
         nPaget.enterAddress(driver, Global.ADDRESS );
@@ -400,7 +414,7 @@ public class CmcTest {
 	public void createCustomerInvalidPin() throws Exception{
 		
 		coreTest.signIn(driver);
-		NewCustomerPageTwo nPage = createCustomerFirstPage();
+		NewCustomerPage nPage = createCustomerFirstPage();
 		nPage.selectCountry(driver);
         nPage.enterAddress(driver, Global.ADDRESS );
         nPage.enterCity(driver, Global.CITY);
@@ -424,7 +438,7 @@ public class CmcTest {
 		sPage.clickRecord(driver);
 		sPage.clickSecurityBox(driver);
 		sPage.clickContiune(driver);
-		NewCustomerPageThree nPage3 = new NewCustomerPageThree(driver);
+		NewCustomerDisplayPage nPage3 = new NewCustomerDisplayPage(driver);
         nPage3.clickFundingSource(driver);
         CreateFundingPage cPage = new CreateFundingPage(driver);
         cPage.enterName(driver, Global.CCNAME );
@@ -440,7 +454,7 @@ public class CmcTest {
 	public void createCustomerInvalidUserName() throws Exception{
 		
 		coreTest.signIn(driver);
-		NewCustomerPageTwo nPage = createCustomerFirstPage();
+		NewCustomerPage nPage = createCustomerFirstPage();
 		nPage.selectCountry(driver);
         nPage.enterAddress(driver, Global.ADDRESS );
         nPage.enterCity(driver, Global.CITY);
@@ -461,7 +475,7 @@ public class CmcTest {
 		dashPage.getLandingPage(Global.URL1);
 		dashPage.clickCustomerTab(driver);
 		dashPage.switchToFrame(driver);
-		NewCustomerPage nPage = new NewCustomerPage(driver);
+		CreateCustomerPage nPage = new CreateCustomerPage(driver);
 		nPage.clickSwitch(driver);
 		nPage.clickCreateCustomer(driver);
 		nPage.clickCustomerType(driver, Global.CUSTOMERTYPE);
@@ -475,28 +489,15 @@ public class CmcTest {
 	 
 	}
 	
-	@Test(priority=17 , enabled=false)
-	public void searchCustomerInvalidEmail() throws Exception{
-		
-		SearchPage sPage = getSearchPage();
-		sPage.clickCustomerType(driver, "Individual");
-		sPage.enterFirstname(driver, Global.FNAME);
-		sPage.enterLastname(driver, Global.LNAME);
-		sPage.enterEmail(driver, Global.FNAME);
-		Assert.assertEquals(sPage.getEmailError(driver), Global.INVALID_EMAIL);
-		Assert.assertFalse(sPage.isSearchEnabled(driver), "Search button should not be enabled!");
-		driver.close();
-	
-	}
 	
 	//private methods 
-	private NewCustomerPageTwo createCustomerFirstPage() throws Exception{
+	private NewCustomerPage createCustomerFirstPage() throws Exception{
 		
 		DashboardPage dashPage = new DashboardPage(driver);
 		dashPage.getLandingPage(Global.URL1);
 		dashPage.clickCustomerTab(driver);
 		dashPage.switchToFrame(driver);
-		NewCustomerPage nPage = new NewCustomerPage(driver);
+		CreateCustomerPage nPage = new CreateCustomerPage(driver);
 		nPage.clickSwitch(driver);
 		nPage.clickCreateCustomer(driver);
 		nPage.clickCustomerType(driver, Global.CUSTOMERTYPE);
@@ -507,57 +508,12 @@ public class CmcTest {
 		phoneNumber = Utils.randomPhoneNumber();
 		nPage.enterPhone(driver, phoneNumber);
 		nPage.clickContinue(driver);
-		NewCustomerPageTwo nPaget = new NewCustomerPageTwo(driver);
+		NewCustomerPage nPaget = new NewCustomerPage(driver);
 		return nPaget;
 	}
 
-	/*
-	private void createCustomer() throws Exception{
-		
-		DashboardPage dashPage = new DashboardPage(driver);
-		dashPage.getLandingPage(Global.URL1);
-		dashPage.clickCustomerTab(driver);
-		dashPage.switchToFrame(driver);
-		NewCustomerPage nPage = new NewCustomerPage(driver);
-		nPage.clickSwitch(driver);
-		nPage.clickCreateCustomer(driver);
-		nPage.clickCustomerType(driver, Global.CUSTOMERTYPE);
-		nPage.enterFirstname(driver, Global.FNAME);
-		nPage.enterLastname(driver, Global.LNAME);
-		email = Utils.randomEmailString();
-		nPage.enterEmail(driver, email);
-		phoneNumber = Utils.randomPhoneNumber();
-		nPage.enterPhone(driver, phoneNumber);
-		nPage.clickContinue(driver);
-		
-		NewCustomerPageTwo nPaget = new NewCustomerPageTwo(driver);
-		nPaget.selectContactType(driver, Global.CONTACTTYPE);
-		nPaget.selectCountry(driver);
-        nPaget.enterAddress(driver, Global.ADDRESS );
-        nPaget.enterCity(driver, Global.CITY);
-        nPaget.selectState(driver);
-        nPaget.enterPostalCode(driver, Global.POSTAL);
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,-250)", "");
-        nPaget.selectPhoneType(driver, Global.PHONETYPE);
-        nPaget.selectSecurityQ(driver);
-        nPaget.enterSecuirtyA(driver, Global.SECURITYA);
-        nPaget.enterUserName(driver, Utils.randomUsernameString());
-        nPaget.enterPin(driver, Global.PIN);
-        nPaget.enterDob(driver, Global.DOB);
-        nPaget.clickSubmit(driver);    
-	}
-	*/
-	
-	private void signIn() throws Exception{
-		SignInPage snPage = new SignInPage(driver);
-		snPage.getLandingPage(Global.URL2);
-		snPage.enterUsername(driver, Global.USER);
-		snPage.enterPasswd(driver, Global.PASSWD);
-		snPage.clickSignin(driver);
-	}
-	
 	private SearchPage getSearchPage() throws Exception{
-		signIn();
+		
 		DashboardPage dashPage = new DashboardPage(driver);
 		dashPage.clickCustomerTab(driver);
 		dashPage.switchToFrame(driver);

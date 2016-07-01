@@ -3,84 +3,76 @@ package automationFramework.Utilities;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+
+import com.beust.jcommander.Strings;
 
 public class Robots {
-
-	public static void iRobotMixxenTestFF() throws AWTException {
-
-		Robot rb = new Robot();
-		rb.keyPress(KeyEvent.VK_ALT);
-		rb.keyPress(KeyEvent.VK_A);
-		rb.delay(2000);
-		rb.keyPress(KeyEvent.VK_ALT);
-		rb.keyPress(KeyEvent.VK_A);
-		rb.delay(2000);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_ALT);
-		rb.keyPress(KeyEvent.VK_I);
-		rb.delay(1000);
-
+	
+	public static void main(String[] args) throws AWTException, IOException{
+		
+		iRobotTest();	
 	}
+	
+	public static void iRobotTest() throws AWTException, IOException {
 
-	public static void iRobotMixxenTest() throws AWTException {
+		 try {
+             
+	            Robot robot = new Robot();
+	               
+	            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"c: && cd c:/Program Files/CTS/ABP Test Client (03.01.0100) && AbpTestClient.exe \"");
+	            robot.delay(3000);
+	            robot.keyPress(KeyEvent.VK_ALT);
+	            robot.keyPress(KeyEvent.VK_T);
+	            robot.keyRelease(KeyEvent.VK_ALT);
+	            robot.keyPress(KeyEvent.VK_DOWN);
+	        	robot.keyPress(KeyEvent.VK_ENTER);
+	        	robot.delay(3000);
+	        	
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_ENTER);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_CONTROL);
+	        	robot.keyPress(KeyEvent.VK_A);
+	        	robot.keyPress(KeyEvent.VK_DELETE);
+	        	robot.keyRelease(KeyEvent.VK_CONTROL);
+	        	robot.delay(3000);
+	        	
+	        	//Exit out 
+	        	robot.keyPress(KeyEvent.VK_ALT);
+	        	robot.keyPress(KeyEvent.VK_F4);
+	        	robot.keyPress(KeyEvent.VK_ALT);
+	        	robot.keyPress(KeyEvent.VK_F4);
+	        	robot.keyPress(KeyEvent.VK_ALT);
+	        	robot.keyPress(KeyEvent.VK_F4);
+	        	robot.keyRelease(KeyEvent.VK_ALT);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_E);
+	        	robot.keyRelease(KeyEvent.VK_E); 
+	        	robot.keyPress(KeyEvent.VK_X);
+	        	robot.keyRelease(KeyEvent.VK_X); 
+	        	robot.keyPress(KeyEvent.VK_I);
+	        	robot.keyRelease(KeyEvent.VK_I); 
+	        	robot.keyPress(KeyEvent.VK_T);
+	        	robot.keyRelease(KeyEvent.VK_T); 
+	        	robot.keyPress(KeyEvent.VK_ENTER);
+	        	
+	        } catch (AWTException e) {
+	            e.printStackTrace();
+	        }
+	    }
+		
 
-		Robot rb = new Robot();
-		rb.keyPress(KeyEvent.VK_LEFT);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.delay(8000);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.delay(5000);
-
-	}
-
-	public static void iRobotDeepBluTest() throws AWTException {
-		Robot rb = new Robot();
-		rb.keyPress(KeyEvent.VK_LEFT);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.delay(8000);
-	}
-
-	public static void iCloseTab() throws AWTException {
-		Robot rb = new Robot();
-		rb.keyPress(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_W);
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_W);
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		rb.delay(5000);
-
-	}
-
-	public static void iOpenWindow() throws AWTException {
-		Robot rb = new Robot();
-		rb.keyPress(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_N);
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		rb.delay(5000);
-
-	}
-
-	public static void iCancel() throws AWTException {
-		Robot rb = new Robot();
-		rb.keyPress(KeyEvent.VK_LEFT);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.delay(3000);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_TAB);
-		rb.delay(1000);
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.delay(5000);
-	}
+	
 }

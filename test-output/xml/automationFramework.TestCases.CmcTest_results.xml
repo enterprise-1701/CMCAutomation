@@ -4,42 +4,19 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="84.051">
+           time="26.470">
   <properties />
-            <testcase name="createFundingSource" time="84.051" classname="automationFramework.TestCases.CmcTest">
-                <failure type="org.openqa.selenium.NoSuchElementException"
-                  message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]&quot;}
-Command duration or timeout: 60.27 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=32.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9ecfa385-aecf-4122-bf6a-fc9d3e6691ce
-*** Element info: {Using=xpath, value=.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]}"
+            <testcase name="createNewCustomer" time="26.470" classname="automationFramework.TestCases.CmcTest">
+                <failure type="java.lang.AssertionError"
+                  message="expected [19-05-2016] but found [17-05-1987]"
               >
-<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='viewCustomer_createFundingSource_lnk']"}
-Command duration or timeout: 60.27 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
-System info: host: 'NACTS-081729', ip: '149.63.89.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=32.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9ecfa385-aecf-4122-bf6a-fc9d3e6691ce
-*** Element info: {Using=xpath, value=.//*[@id='viewCustomer_createFundingSource_lnk']}
-  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-  sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-  java.lang.reflect.Constructor.newInstance(Unknown Source)
-  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-  org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-  automationFramework.PageObjects.NewCustomerPageThree.clickFundingSource(NewCustomerPageThree.java:96)
-  automationFramework.TestCases.CmcTest.createFundingSource(CmcTest.java:192)
+<![CDATA[java.lang.AssertionError: expected [19-05-2016] but found [17-05-1987]
+  org.testng.Assert.fail(Assert.java:94)
+  org.testng.Assert.failNotEquals(Assert.java:494)
+  org.testng.Assert.assertEquals(Assert.java:123)
+  org.testng.Assert.assertEquals(Assert.java:176)
+  org.testng.Assert.assertEquals(Assert.java:186)
+  automationFramework.TestCases.CmcTest.createNewCustomer(CmcTest.java:186)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -64,13 +41,6 @@ Session ID: 9ecfa385-aecf-4122-bf6a-fc9d3e6691ce
   org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='viewCustomer_createFundingSource_lnk']"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
-System info: host: 'NACTS-081729', ip: '149.63.89.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_77'
-Driver info: driver.version: unknown
-  <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10271)
-  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:603)
 ]]>
       </failure>
 

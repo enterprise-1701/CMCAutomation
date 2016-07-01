@@ -21,7 +21,11 @@ public class DashboardPage extends BasePage {
 
 	// Element Locators
 	private static final String DASHBOARD = "//*[@class='cmc-dashboard-capitalize cmc-dashboard-greeting']";	
-	private static final String CUSTOMER = ".//*[@id='launchPad_customer_btn']/i";
+	private static final String CUSTOMER = "//*[@id='header_customer_btn']";
+	
+	//private static final String CUSTOMER = "//*[@id='launchPad_customer_btn']/h4";
+	
+
 	
 	public DashboardPage(WebDriver driver) {
 		super(driver);

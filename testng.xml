@@ -2,7 +2,12 @@
 	<test name ="FirefoxTest">
 	<parameter name="browser" value="firefox.exe" />
 		<classes>
-		    <class name="automationFramework.TestCases.CmcTest" />
+		    <class name="automationFramework.TestCases.CreateCustomerTest" />
+		    <class name="automationFramework.TestCases.SearchTest" />
+		    <class name="automationFramework.TestCases.CreateFundingTest" />    
+		    <class name="automationFramework.TestCases.LinkAccountTest" />  
+		    <class name="automationFramework.TestCases.BalanceHistoryTest" />  
+		    <class name="automationFramework.TestCases.EmailTest" />  
 		</classes>
 	</test>
 		<listeners>

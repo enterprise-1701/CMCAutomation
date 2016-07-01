@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>FirefoxTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>32/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 08 08:36:30 PDT 2016</td>
+<td>Started on:</td><td>Fri Jul 01 09:23:36 PDT 2016</td>
 </tr>
-<tr><td>Total time:</td><td>89 seconds (89342 ms)</td>
+<tr><td>Total time:</td><td>863 seconds (863594 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,97 +67,173 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='automationFramework.TestCases.CmcTest.createFundingSource()'><b>createFundingSource</b><br>Test class: automationFramework.TestCases.CmcTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]&quot;}
-Command duration or timeout: 60.27 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=32.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9ecfa385-aecf-4122-bf6a-fc9d3e6691ce
-*** Element info: {Using=xpath, value=.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at automationFramework.PageObjects.NewCustomerPageThree.clickFundingSource(NewCustomerPageThree.java:96)
-	at automationFramework.TestCases.CmcTest.createFundingSource(CmcTest.java:192)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10271)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:603)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace166454155", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace166454155'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]&quot;}
-Command duration or timeout: 60.27 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=32.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9ecfa385-aecf-4122-bf6a-fc9d3e6691ce
-*** Element info: {Using=xpath, value=.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at automationFramework.PageObjects.NewCustomerPageThree.clickFundingSource(NewCustomerPageThree.java:96)
-	at automationFramework.TestCases.CmcTest.createFundingSource(CmcTest.java:192)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;viewCustomer_createFundingSource_lnk&apos;]&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10271)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/200123/AppData/Local/Temp/anonymous5821890039713970613webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:603)
-</pre></div></td>
-<td>84</td>
-<td>automationFramework.TestCases.CmcTest@5d76b067</td></tr>
+<td title='automationFramework.TestCases.BalanceHistoryTest.checkBalanceHistory()'><b>checkBalanceHistory</b><br>Test class: automationFramework.TestCases.BalanceHistoryTest</td>
+<td></td>
+<td>22</td>
+<td>automationFramework.TestCases.BalanceHistoryTest@6acdbdf5</td></tr>
+<tr>
+<td title='automationFramework.TestCases.EmailTest.checkEmailNewCustomer()'><b>checkEmailNewCustomer</b><br>Test class: automationFramework.TestCases.EmailTest</td>
+<td></td>
+<td>37</td>
+<td>automationFramework.TestCases.EmailTest@17579e0f</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerCancel()'><b>createCustomerCancel</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>19</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerContactTypeNotSelected()'><b>createCustomerContactTypeNotSelected</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>27</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerEmailMissing()'><b>createCustomerEmailMissing</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>14</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerFundingInvalidCC()'><b>createCustomerFundingInvalidCC</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>18</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateFundingTest.createCustomerFundingInvalidCC()'><b>createCustomerFundingInvalidCC</b><br>Test class: automationFramework.TestCases.CreateFundingTest</td>
+<td></td>
+<td>27</td>
+<td>automationFramework.TestCases.CreateFundingTest@4b1c1ea0</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerInvalidEmail()'><b>createCustomerInvalidEmail</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>25</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateFundingTest.createCustomerInvalidEmail()'><b>createCustomerInvalidEmail</b><br>Test class: automationFramework.TestCases.CreateFundingTest</td>
+<td></td>
+<td>21</td>
+<td>automationFramework.TestCases.CreateFundingTest@4b1c1ea0</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerInvalidPhone()'><b>createCustomerInvalidPhone</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>11</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerInvalidPin()'><b>createCustomerInvalidPin</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>22</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerInvalidUserName()'><b>createCustomerInvalidUserName</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>19</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createCustomerNameMissing()'><b>createCustomerNameMissing</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>9</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateFundingTest.createFundingSource()'><b>createFundingSource</b><br>Test class: automationFramework.TestCases.CreateFundingTest</td>
+<td></td>
+<td>39</td>
+<td>automationFramework.TestCases.CreateFundingTest@4b1c1ea0</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateFundingTest.createFundingSourceCancel()'><b>createFundingSourceCancel</b><br>Test class: automationFramework.TestCases.CreateFundingTest</td>
+<td></td>
+<td>20</td>
+<td>automationFramework.TestCases.CreateFundingTest@4b1c1ea0</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateFundingTest.createFundingSourceNewBillingAddress()'><b>createFundingSourceNewBillingAddress</b><br>Test class: automationFramework.TestCases.CreateFundingTest</td>
+<td></td>
+<td>45</td>
+<td>automationFramework.TestCases.CreateFundingTest@4b1c1ea0</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateFundingTest.createFundingSourceTypeNotSelected()'><b>createFundingSourceTypeNotSelected</b><br>Test class: automationFramework.TestCases.CreateFundingTest</td>
+<td></td>
+<td>19</td>
+<td>automationFramework.TestCases.CreateFundingTest@4b1c1ea0</td></tr>
+<tr>
+<td title='automationFramework.TestCases.CreateCustomerTest.createNewCustomer()'><b>createNewCustomer</b><br>Test class: automationFramework.TestCases.CreateCustomerTest</td>
+<td></td>
+<td>33</td>
+<td>automationFramework.TestCases.CreateCustomerTest@74650e52</td></tr>
+<tr>
+<td title='automationFramework.TestCases.LinkAccountTest.linkAccountBankNumberMissingTest()'><b>linkAccountBankNumberMissingTest</b><br>Test class: automationFramework.TestCases.LinkAccountTest</td>
+<td></td>
+<td>24</td>
+<td>automationFramework.TestCases.LinkAccountTest@184f6be2</td></tr>
+<tr>
+<td title='automationFramework.TestCases.LinkAccountTest.linkAccountCancelTest()'><b>linkAccountCancelTest</b><br>Test class: automationFramework.TestCases.LinkAccountTest</td>
+<td></td>
+<td>27</td>
+<td>automationFramework.TestCases.LinkAccountTest@184f6be2</td></tr>
+<tr>
+<td title='automationFramework.TestCases.LinkAccountTest.linkAccountCardExpirationMissingTest()'><b>linkAccountCardExpirationMissingTest</b><br>Test class: automationFramework.TestCases.LinkAccountTest</td>
+<td></td>
+<td>21</td>
+<td>automationFramework.TestCases.LinkAccountTest@184f6be2</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerCheckDuplicateTestAll()'><b>searchCustomerCheckDuplicateTestAll</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>19</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerCheckDuplicateTestEmail()'><b>searchCustomerCheckDuplicateTestEmail</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>16</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerCheckDuplicateTestEmailPhone()'><b>searchCustomerCheckDuplicateTestEmailPhone</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>16</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerCheckDuplicateTestFname()'><b>searchCustomerCheckDuplicateTestFname</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>14</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerCheckDuplicateTestFnameLname()'><b>searchCustomerCheckDuplicateTestFnameLname</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>15</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerCheckDuplicateTestLname()'><b>searchCustomerCheckDuplicateTestLname</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>14</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerCheckDuplicateTestPhone()'><b>searchCustomerCheckDuplicateTestPhone</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>17</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerInvalidEmail()'><b>searchCustomerInvalidEmail</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>11</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerNoResultsTest()'><b>searchCustomerNoResultsTest</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>12</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerNotVerifiedTest()'><b>searchCustomerNotVerifiedTest</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>19</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
+<tr>
+<td title='automationFramework.TestCases.SearchTest.searchCustomerTypeNotSelected()'><b>searchCustomerTypeNotSelected</b><br>Test class: automationFramework.TestCases.SearchTest</td>
+<td></td>
+<td>9</td>
+<td>automationFramework.TestCases.SearchTest@15d0c81b</td></tr>
 </table><p>
 </body>
 </html>
