@@ -3,6 +3,9 @@
 	<parameter name="browser" value="firefox.exe" />
 		<classes>
 		    <class name="automationFramework.TestCases.EmailTest" />  
+		    <methods>
+        	<include name="checkEmailCreateOrder" />
+      		</methods>
 		</classes>
 	</test>
 		<listeners>

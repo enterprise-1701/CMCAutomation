@@ -3,6 +3,8 @@ package automationFramework.TestCases;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import automationFramework.PageObjects.*;
 import automationFramework.Utilities.*;
 
@@ -107,4 +109,27 @@ public class CoreTest {
         nPaget.clickSubmit(driver);   
         return driver;
 	}	
+ 
+ public WebDriver createOrderSubmit(WebDriver driver, String email) throws Exception{
+			
+	 	createCustomer(driver, email);	
+	 	NewCustomerDisplayPage nPage3 = new NewCustomerDisplayPage(driver);
+	 	nPage3.clickFundingSource(driver);
+	 	CreateFundingPage cPage = new CreateFundingPage(driver);
+	 	cPage.selectPaymentType(driver);
+	 	cPage.enterName(driver, Global.CCNAME );
+	 	cPage.enterCC(driver, Global.CC);
+	 	cPage.selectMonth(driver);
+	 	cPage.selectYear(driver);
+	 	cPage.clickSubmit(driver);
+	 	Utils.waitTime(5000);
+	 	cPage.clickCreateOrder(driver);
+	 	CreateOrderPage oPage = new CreateOrderPage(driver);
+	 	oPage.selectPurseType(driver);
+	 	oPage.selectOrderType(driver);
+	 	oPage.selectOrderAmount(driver);
+	 	oPage.clickSubmit(driver);
+	 	Utils.waitTime(3000);
+	 	return driver;  	
+	}
 }

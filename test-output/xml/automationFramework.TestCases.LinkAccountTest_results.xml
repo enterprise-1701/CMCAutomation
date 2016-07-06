@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="73.431">
+           time="73.368">
   <properties />
   
   
-            <testcase name="linkAccountBankNumberMissingTest" time="24.509" classname="automationFramework.TestCases.LinkAccountTest" />
-                <testcase name="linkAccountCancelTest" time="27.649" classname="automationFramework.TestCases.LinkAccountTest" />
-                <testcase name="linkAccountCardExpirationMissingTest" time="21.273" classname="automationFramework.TestCases.LinkAccountTest" />
+            <testcase name="linkAccountBankNumberMissingTest" time="25.485" classname="automationFramework.TestCases.LinkAccountTest" />
+                <testcase name="linkAccountCardExpirationMissingTest" time="20.449" classname="automationFramework.TestCases.LinkAccountTest" />
+                <testcase name="linkAccountCancelTest" time="27.434" classname="automationFramework.TestCases.LinkAccountTest" />
       
 </testsuite>

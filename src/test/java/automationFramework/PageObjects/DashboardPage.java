@@ -25,8 +25,6 @@ public class DashboardPage extends BasePage {
 	
 	//private static final String CUSTOMER = "//*[@id='launchPad_customer_btn']/h4";
 	
-
-	
 	public DashboardPage(WebDriver driver) {
 		super(driver);
 	}

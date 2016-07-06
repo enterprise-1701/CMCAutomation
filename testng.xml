@@ -8,6 +8,8 @@
 		    <class name="automationFramework.TestCases.LinkAccountTest" />  
 		    <class name="automationFramework.TestCases.BalanceHistoryTest" />  
 		    <class name="automationFramework.TestCases.EmailTest" />  
+		    <class name="automationFramework.TestCases.CreateOrderTest" />  
+		    <class name="automationFramework.TestCases.TravelHistoryTest" /> 
 		</classes>
 	</test>
 		<listeners>

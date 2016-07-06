@@ -23,6 +23,8 @@ public class BalanceHistoryPage extends BasePage {
 	private static final String TAMOUNT = ".//*[@id='balanceHistory_list_tbl']/div/div[1]/table/tbody/tr[1]/td[5]";
 	private static final String END_BALANCE = ".//*[@id='balanceHistory_list_tbl']/div/div[1]/table/tbody/tr[1]/td[6]/span/span";
 	private static final String TOTAL_BALANCE = ".//*[@id='accountBalance_totalBalance_div']";
+	private static final String FIRST_RECORD = "//*[@id='balanceHistory_list_tbl']/div/div[1]/table/tbody/tr[1]/td[2]/span/span";
+
 	
 	public BalanceHistoryPage(WebDriver driver) {
 		super(driver);
@@ -49,5 +51,8 @@ public class BalanceHistoryPage extends BasePage {
 		return driver.findElement(By.xpath(TOTAL_BALANCE)).getText();	
 	}
 	
-	
+	public void clickFirstRecord(WebDriver driver) throws InterruptedException, AWTException{
+		 driver.findElement(By.xpath(FIRST_RECORD)).click();	
+	}
+		
 }

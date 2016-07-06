@@ -19,6 +19,7 @@ public class BalanceHistoryTest {
 	private static final String TRANSACTION_AMOUNT = "$5.00";
 	private static final String ENDING_BALANCE = "$26.00";
 	private static final String TOTAL_BALANCE = "$26.00";
+	private static final String ENTRY_TYPE = "LoadValue";
 	
 	static WebDriver driver;
 	static String browser;
@@ -55,7 +56,7 @@ public class BalanceHistoryTest {
 		Utils.waitTime(5000);
 		BalanceHistoryPage bPage = new BalanceHistoryPage(driver);
 		Assert.assertEquals(bPage.getPurse(driver),  Global.PURSE);
-		Assert.assertEquals(bPage.getEntryType(driver),  Global.ENTRY_TYPE);
+		Assert.assertEquals(bPage.getEntryType(driver), Global.ENTRY_TYPE);
 		Assert.assertEquals(bPage.getTransactionAmount(driver),  TRANSACTION_AMOUNT);
 		Assert.assertEquals(bPage.getEndingBalance(driver),  ENDING_BALANCE);
 		Assert.assertEquals(bPage.getEndingBalance(driver),  TOTAL_BALANCE);
@@ -64,7 +65,7 @@ public class BalanceHistoryTest {
 	}
 	
 
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void checkBalanceHistoryDetail()throws Exception{
 	
 		coreTest.signIn(driver);
@@ -77,12 +78,16 @@ public class BalanceHistoryTest {
 		sPage.clickBalanceHistory(driver);
 		Utils.waitTime(5000);
 		BalanceHistoryPage bPage = new BalanceHistoryPage(driver);
-		Assert.assertEquals(bPage.getPurse(driver),  Global.PURSE);
-		Assert.assertEquals(bPage.getEntryType(driver),  Global.ENTRY_TYPE);
-		Assert.assertEquals(bPage.getTransactionAmount(driver),  TRANSACTION_AMOUNT);
-		Assert.assertEquals(bPage.getEndingBalance(driver),  ENDING_BALANCE);
-		Assert.assertEquals(bPage.getEndingBalance(driver),  TOTAL_BALANCE);
-		Log.info("checkBalanceHistory Completed");
+		bPage.clickFirstRecord(driver);
+		Utils.waitTime(5000);
+		BalanceHistoryDetailPage bdPage = new BalanceHistoryDetailPage(driver);
+		//Utils.handleMultipleWindows(driver, "Balance History Detail");
+		Utils.waitTime(5000);
+		Assert.assertEquals(bdPage.getPurse(driver),  Global.PURSE);
+		Assert.assertEquals(bdPage.getEntryType(driver),  ENTRY_TYPE);
+		Assert.assertEquals(bdPage.getTransactionAmount(driver),  TRANSACTION_AMOUNT);
+		Assert.assertEquals(bdPage.getEndingBalance(driver),  ENDING_BALANCE);
+		bdPage.clickClose(driver);
 		driver.close();
 	}
 

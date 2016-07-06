@@ -182,6 +182,10 @@ public class BasePage {
 		return driver.findElement(By.xpath(CREATE_FUNDINGSOURCE)).isDisplayed();
 		}
 	
+	public boolean isCreateOrderDisplayed(WebDriver driver) throws InterruptedException, AWTException{
+		return driver.findElement(By.xpath(CREATE_ORDER)).isDisplayed();
+		}
+	
 	public String getCookie(String cookie) {
 		driver.get(Global.URL1);
 		Set<Cookie> cookies = driver.manage().getCookies();

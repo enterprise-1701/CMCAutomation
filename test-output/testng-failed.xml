@@ -11,8 +11,8 @@
     <classes>
       <class name="automationFramework.TestCases.EmailTest">
         <methods>
-          <include name="checkEmailNewCustomer"/>
           <include name="tearDown"/>
+          <include name="checkEmailCreateOrder"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- automationFramework.TestCases.EmailTest -->

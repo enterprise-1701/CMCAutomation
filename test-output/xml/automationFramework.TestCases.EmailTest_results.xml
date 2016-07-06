@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="37.712">
+           time="67.335">
   <properties />
   
   
-            <testcase name="checkEmailNewCustomer" time="37.712" classname="automationFramework.TestCases.EmailTest" />
+            <testcase name="checkEmailCreateOrder" time="67.335" classname="automationFramework.TestCases.EmailTest" />
       
 </testsuite>
