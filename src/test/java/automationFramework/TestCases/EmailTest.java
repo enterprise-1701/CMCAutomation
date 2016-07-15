@@ -82,6 +82,8 @@ public class EmailTest{
 			
 	}
 	
+	/*
+	
 	@Test
 	public void checkEmailCreateOrder() throws Exception{
 		
@@ -119,6 +121,8 @@ public class EmailTest{
 	      }
 			
 	}
+	
+	*/
 	
 	@AfterMethod
 	public void tearDown() {

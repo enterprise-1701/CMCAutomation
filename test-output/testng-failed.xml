@@ -9,13 +9,13 @@
   <test name="FirefoxTest(failed)">
     <parameter name="browser" value="firefox.exe"/>
     <classes>
-      <class name="automationFramework.TestCases.EmailTest">
+      <class name="automationFramework.TestCases.LinkAccountABPTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="checkEmailCreateOrder"/>
           <include name="setUp"/>
+          <include name="linkAccountVerifiedTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- automationFramework.TestCases.EmailTest -->
+      </class> <!-- automationFramework.TestCases.LinkAccountABPTest -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Automation - Suite] -->

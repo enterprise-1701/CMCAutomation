@@ -8,12 +8,12 @@
       <![CDATA[TearDown Complete]]>
     </line>
   </reporter-output>
-  <suite name="Automation - Suite" duration-ms="72759" started-at="2016-07-06T23:03:22Z" finished-at="2016-07-06T23:04:35Z">
+  <suite name="Automation - Suite" duration-ms="82849" started-at="2016-07-13T17:13:52Z" finished-at="2016-07-13T17:15:14Z">
     <groups>
     </groups>
-    <test name="FirefoxTest" duration-ms="72759" started-at="2016-07-06T23:03:22Z" finished-at="2016-07-06T23:04:35Z">
+    <test name="FirefoxTest" duration-ms="82849" started-at="2016-07-13T17:13:52Z" finished-at="2016-07-13T17:15:14Z">
       <class name="automationFramework.TestCases.EmailTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automationFramework.TestCases.EmailTest@48503868]" name="setUp" is-config="true" duration-ms="5174" started-at="2016-07-06T16:03:22Z" finished-at="2016-07-06T16:03:27Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:automationFramework.TestCases.EmailTest@2d6eabae]" name="setUp" is-config="true" duration-ms="10267" started-at="2016-07-13T10:13:52Z" finished-at="2016-07-13T10:14:02Z">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="checkEmailCreateOrder()[pri:0, instance:automationFramework.TestCases.EmailTest@48503868]" name="checkEmailCreateOrder" duration-ms="67335" started-at="2016-07-06T16:03:27Z" finished-at="2016-07-06T16:04:34Z">
+        <test-method status="PASS" signature="checkEmailNewCustomer()[pri:0, instance:automationFramework.TestCases.EmailTest@2d6eabae]" name="checkEmailNewCustomer" duration-ms="71942" started-at="2016-07-13T10:14:02Z" finished-at="2016-07-13T10:15:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkEmailCreateOrder -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:automationFramework.TestCases.EmailTest@48503868]" name="tearDown" is-config="true" duration-ms="232" started-at="2016-07-06T16:04:34Z" finished-at="2016-07-06T16:04:35Z">
+        </test-method> <!-- checkEmailNewCustomer -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:automationFramework.TestCases.EmailTest@2d6eabae]" name="tearDown" is-config="true" duration-ms="605" started-at="2016-07-13T10:15:14Z" finished-at="2016-07-13T10:15:14Z">
           <reporter-output>
             <line>
               <![CDATA[TearDown Complete]]>

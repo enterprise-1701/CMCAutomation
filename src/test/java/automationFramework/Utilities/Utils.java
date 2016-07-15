@@ -1,10 +1,19 @@
 package automationFramework.Utilities;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Set;
+import java.util.stream.Collectors;
 import java.util.Random;
+import java.util.Scanner;
 
 import org.apache.commons.io.FileUtils;
 import org.eclipse.jetty.util.log.Log;
@@ -25,10 +34,16 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import automationFramework.Utilities.Global;
 
+import java.io.IOException;
+import org.apache.commons.codec.binary.Base64;
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+
+
 public final class Utils {
 
 	public static WebDriver driver = null;
-
+		
 	public static void waitForElement(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -95,10 +110,8 @@ public final class Utils {
 			Reporter.log("Utils.openBrowser failed");
 		}
 	
-		return driver;
-		
+		return driver;	
 	}
-	
 	
 	//Creating random email and password
 	public static String randomEmailString(){
@@ -159,7 +172,7 @@ public final class Utils {
 		}
 		
 		
-	// capturing screenshots of the scripts
+	// capturing screenshots 
 	public static void getScreenShot() throws Exception {
 		try {
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -182,4 +195,106 @@ public final class Utils {
 			}
 		}
 	}
+	
+	
+	//Get index from external file
+	public static String getIndex(){
+		
+		String index = null;
+		try{
+			Scanner s = new Scanner(new File(Global.INDEX_FILE));
+			while(s.hasNext()){
+				index = s.next();
+			}
+			s.close();
+	
+		}catch (Exception e) {
+			Reporter.log("Utils.getIndex failed");
+			System.out.print("Utils.getIndex failed");
+		}
+		
+		return index;	
+	}
+	
+	//Increment index in external file
+	public static String incrementIndex(){
+		
+        //Get current index
+		String currentIndex = Utils.getIndex();
+		//Convert to int and increment 
+		int currentIndex1 = Integer.parseInt(currentIndex);
+		int currentIndex2 = currentIndex1 + 1;
+		//Convert incremented index back to String
+		String nextIndex = Integer.toUnsignedString(currentIndex2);
+		
+		return nextIndex;					
+	}
+	
+	//Set index in external file
+	public static void setIndex(String newIndex){
+		
+		try{
+		
+		File file = new File(Global.INDEX_FILE);
+		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		BufferedWriter bw = new BufferedWriter(fw);
+		bw.write(newIndex);
+		bw.close();
+		
+		}catch (IOException e){
+			Reporter.log("Utils.setIndex failed");
+			System.out.print("Utils.setIndex failed");
+		}
+			
+	}
+	
+	
+	// read text file and return row specified 
+	public static String readFile(int index) throws FileNotFoundException{
+		
+		ArrayList<String> list = new ArrayList<String>();
+		String token = null;
+		try{
+			Scanner s = new Scanner(new File(Global.INPUT_FILE));
+			while(s.hasNext()){
+				list.add(s.next());
+			}
+		
+			token = list.get(index);
+			s.close();
+	
+		} catch (Exception e) {
+			Reporter.log("Utils.readFile failed");
+			System.out.print("Utils.readFile failed");
+		}
+		
+	return token;
+	
+	}
+	
+	//MAC generating code
+	public String calcHmac(String src) throws Exception {
+	       String base64Key = "GaAodwiA6BREnloZYjOkONxCC//EKClXhzAuYoX91oU="; 
+
+	       Mac mac = Mac.getInstance("HmacMD5");   
+	       byte[] decodedBytes = Base64.decodeBase64(base64Key.getBytes("UTF-16LE"));
+	       SecretKeySpec sk = new SecretKeySpec(decodedBytes,mac.getAlgorithm());      
+	       mac.init(sk);
+	              
+	
+	       String srcStr = src;     
+	       byte[] result = mac.doFinal(srcStr.getBytes("UTF-16LE"));
+	
+	       
+	       String s = new String(result, "UTF-16LE");
+	
+	       byte[] resultBase64 = Base64.encodeBase64(mac.doFinal(srcStr.getBytes("ASCII"))); 
+
+	       String sB64 = new String(resultBase64, "UTF-8");
+
+	       return sB64 ;
+	}
+
+
+		
 }

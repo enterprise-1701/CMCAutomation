@@ -2,6 +2,9 @@ package automationFramework.Utilities;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
@@ -9,12 +12,8 @@ import com.beust.jcommander.Strings;
 
 public class Robots {
 	
-	public static void main(String[] args) throws AWTException, IOException{
-		
-		iRobotTest();	
-	}
 	
-	public static void iRobotTest() throws AWTException, IOException {
+	public void abpTestClient(String currentToken) throws AWTException, IOException {
 
 		 try {
              
@@ -22,6 +21,21 @@ public class Robots {
 	               
 	            Runtime.getRuntime().exec("cmd /c start cmd.exe /K \"c: && cd c:/Program Files/CTS/ABP Test Client (03.01.0100) && AbpTestClient.exe \"");
 	            robot.delay(3000);
+	        	robot.keyPress(KeyEvent.VK_CONTROL);
+	        	robot.keyPress(KeyEvent.VK_A);
+	        	robot.keyPress(KeyEvent.VK_DELETE);
+	        	
+	        	//Change the server name
+	        	StringSelection stringSelection = new StringSelection(Global.ABP_SERVER);
+	        	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+	        	clipboard.setContents(stringSelection, stringSelection);
+	        	robot.keyPress(KeyEvent.VK_CONTROL);
+	        	robot.keyPress(KeyEvent.VK_V);
+	        	robot.keyRelease(KeyEvent.VK_V);
+	        	robot.keyRelease(KeyEvent.VK_CONTROL);
+	        	robot.delay(3000);
+	        	
+	            //Go to Device Tap
 	            robot.keyPress(KeyEvent.VK_ALT);
 	            robot.keyPress(KeyEvent.VK_T);
 	            robot.keyRelease(KeyEvent.VK_ALT);
@@ -29,6 +43,7 @@ public class Robots {
 	        	robot.keyPress(KeyEvent.VK_ENTER);
 	        	robot.delay(3000);
 	        	
+	        	//On Device Tap
 	        	robot.keyPress(KeyEvent.VK_TAB);
 	        	robot.delay(1000);
 	        	robot.keyPress(KeyEvent.VK_TAB);
@@ -49,7 +64,103 @@ public class Robots {
 	        	robot.keyRelease(KeyEvent.VK_CONTROL);
 	        	robot.delay(3000);
 	        	
-	        	//Exit out 
+	        	//Change the token data
+	        	StringSelection stringSelection2 = new StringSelection(currentToken);
+	        	Clipboard clipboard2 = Toolkit.getDefaultToolkit().getSystemClipboard();
+	        	clipboard2.setContents(stringSelection2, stringSelection2);
+	        	robot.keyPress(KeyEvent.VK_CONTROL);
+	        	robot.keyPress(KeyEvent.VK_V);
+	        	robot.keyRelease(KeyEvent.VK_V);
+	        	robot.keyRelease(KeyEvent.VK_CONTROL);
+	        	robot.delay(3000);
+	        	
+	        	//tab to Post Tap
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_TAB);
+	        	robot.delay(1000);
+	        	robot.keyPress(KeyEvent.VK_ENTER);
+	        	robot.delay(15000);
+	        	
+	        	//Exit out of test tool
 	        	robot.keyPress(KeyEvent.VK_ALT);
 	        	robot.keyPress(KeyEvent.VK_F4);
 	        	robot.keyPress(KeyEvent.VK_ALT);

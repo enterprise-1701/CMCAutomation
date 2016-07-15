@@ -66,5 +66,8 @@ public class Global {
 	public  static final String INVALID_PHONE = "4916" ;	
 	public  static final String PURSE = "Default Purse" ;	
 	public  static final String ENTRY_TYPE = "Load Value";
-	
+	public static final String TOKEN_DATA = "4386911579322359=17011010000067200000";
+	public static final String ABP_SERVER = "172.23.4.200";
+	public static final String INPUT_FILE = "C://Automation/Data/tokenData.txt";
+	public static final String INDEX_FILE = "C://Automation/Data/index.txt";
 }
