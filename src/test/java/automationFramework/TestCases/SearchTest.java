@@ -55,7 +55,7 @@ public class SearchTest {
 	}
 
 	
-	@Test(priority=1 , enabled=false)
+	@Test(priority=1 , enabled=true)
 	public void searchCustomerVerifiedTest()throws Exception{
 	
 		coreTest.signIn(driver);
@@ -179,10 +179,10 @@ public class SearchTest {
 		coreTest.signIn(driver);
 		SearchPage sPage = getSearchPage();
 		sPage.clickCustomerType(driver, "Individual");
-		sPage.enterFirstname(driver, FNAME);
+		sPage.enterFirstname(driver, DUPLICATE_FNAME);
 		sPage.clickSearch(driver);
 		Utils.waitTime(5000);
-		Assert.assertEquals(sPage.getFirstName(driver), FNAME);
+		Assert.assertEquals(sPage.getFirstName(driver), DUPLICATE_FNAME);
 		driver.close();
 		    	
 	}
@@ -193,10 +193,10 @@ public class SearchTest {
 		coreTest.signIn(driver);
 		SearchPage sPage = getSearchPage();
 		sPage.clickCustomerType(driver, "Individual");
-		sPage.enterLastname(driver, LNAME);
+		sPage.enterLastname(driver, DUPLICATE_LNAME);
 		sPage.clickSearch(driver);
 		Utils.waitTime(5000);
-		Assert.assertEquals(sPage.getLastName(driver), LNAME);
+		Assert.assertEquals(sPage.getLastName(driver), DUPLICATE_LNAME);
 		driver.close();
 		    	
 	}
@@ -207,12 +207,12 @@ public class SearchTest {
 		coreTest.signIn(driver);
 		SearchPage sPage = getSearchPage();
 		sPage.clickCustomerType(driver, "Individual");
-		sPage.enterFirstname(driver, FNAME);
-		sPage.enterLastname(driver, LNAME);
+		sPage.enterFirstname(driver, DUPLICATE_FNAME);
+		sPage.enterLastname(driver, DUPLICATE_LNAME);
 		sPage.clickSearch(driver);
 		Utils.waitTime(5000);
-		Assert.assertEquals(sPage.getFirstName(driver), FNAME);
-		Assert.assertEquals(sPage.getLastName(driver), LNAME);
+		Assert.assertEquals(sPage.getFirstName(driver), DUPLICATE_FNAME);
+		Assert.assertEquals(sPage.getLastName(driver), DUPLICATE_LNAME);
 		driver.close();
 		    	
 	}

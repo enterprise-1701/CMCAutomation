@@ -16,9 +16,9 @@ import automationFramework.Utilities.*;
 public class BalanceHistoryTest {
 
 	private static Logger Log = Logger.getLogger(Logger.class.getName());
-	private static final String TRANSACTION_AMOUNT = "$5.00";
-	private static final String ENDING_BALANCE = "$26.00";
-	private static final String TOTAL_BALANCE = "$26.00";
+	private static final String TRANSACTION_AMOUNT = "$12.40";
+	private static final String ENDING_BALANCE = "$105.00";
+	private static final String TOTAL_BALANCE = "$105.00";
 	private static final String ENTRY_TYPE = "LoadValue";
 	
 	static WebDriver driver;

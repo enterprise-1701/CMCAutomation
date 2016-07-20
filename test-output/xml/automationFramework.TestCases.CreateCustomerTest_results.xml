@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="198.077">
+           time="267.676">
   <properties />
   
   
-            <testcase name="createCustomerInvalidPhone" time="12.852" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerCancel" time="16.671" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerInvalidUserName" time="17.594" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerFundingInvalidCC" time="21.741" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerInvalidEmail" time="25.105" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createNewCustomer" time="29.852" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerNameMissing" time="11.731" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerEmailMissing" time="12.722" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerInvalidPin" time="24.478" classname="automationFramework.TestCases.CreateCustomerTest" />
-                <testcase name="createCustomerContactTypeNotSelected" time="25.331" classname="automationFramework.TestCases.CreateCustomerTest" />
+            <testcase name="createCustomerInvalidPhone" time="18.923" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerCancel" time="30.306" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerInvalidUserName" time="22.436" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerFundingInvalidCC" time="34.780" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerInvalidEmail" time="33.023" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createNewCustomer" time="45.243" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerNameMissing" time="16.192" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerEmailMissing" time="14.440" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerInvalidPin" time="28.892" classname="automationFramework.TestCases.CreateCustomerTest" />
+                <testcase name="createCustomerContactTypeNotSelected" time="23.441" classname="automationFramework.TestCases.CreateCustomerTest" />
       
 </testsuite>

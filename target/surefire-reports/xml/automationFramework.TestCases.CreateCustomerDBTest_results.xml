@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FirefoxTest"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="86.717">
+  <properties />
+  
+  
+            <testcase name="createNewCustomerCancelDB" time="33.852" classname="automationFramework.TestCases.CreateCustomerDBTest" />
+                <testcase name="createNewCustomerDB" time="52.865" classname="automationFramework.TestCases.CreateCustomerDBTest" />
+      
+</testsuite>

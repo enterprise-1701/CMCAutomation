@@ -27,7 +27,7 @@
   		<inherited>true</inherited>
   		<configuration>
   	<suiteXmlFiles>
-  		<suiteXmlFile>testng.xml</suiteXmlFile>
+  		<suiteXmlFile>testng3.xml</suiteXmlFile>
   	</suiteXmlFiles> 
   	<properties>
      <!-- Setting ReportNG listeners -->
@@ -87,6 +87,12 @@
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-email</artifactId>
     <version>1.2</version>
-</dependency>		
+	</dependency>	
+	<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+	<dependency>
+    <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.1-901.jdbc4</version>
+	</dependency>	
   </dependencies>
 </project>

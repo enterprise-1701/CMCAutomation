@@ -4,15 +4,15 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="173.584">
+           time="235.111">
   <properties />
   
   
-            <testcase name="createFundingSourceNewBillingAddress" time="44.790" classname="automationFramework.TestCases.CreateFundingTest" />
-                <testcase name="createFundingSourceTypeNotSelected" time="20.439" classname="automationFramework.TestCases.CreateFundingTest" />
-                <testcase name="createCustomerFundingInvalidCC" time="23.181" classname="automationFramework.TestCases.CreateFundingTest" />
-                <testcase name="createFundingSourceCancel" time="20.675" classname="automationFramework.TestCases.CreateFundingTest" />
-                <testcase name="createCustomerInvalidEmail" time="22.260" classname="automationFramework.TestCases.CreateFundingTest" />
-                <testcase name="createFundingSource" time="42.239" classname="automationFramework.TestCases.CreateFundingTest" />
+            <testcase name="createFundingSourceCancel" time="28.636" classname="automationFramework.TestCases.CreateFundingTest" />
+                <testcase name="createFundingSource" time="52.300" classname="automationFramework.TestCases.CreateFundingTest" />
+                <testcase name="createCustomerFundingInvalidCC" time="26.671" classname="automationFramework.TestCases.CreateFundingTest" />
+                <testcase name="createFundingSourceTypeNotSelected" time="28.914" classname="automationFramework.TestCases.CreateFundingTest" />
+                <testcase name="createFundingSourceNewBillingAddress" time="67.396" classname="automationFramework.TestCases.CreateFundingTest" />
+                <testcase name="createCustomerInvalidEmail" time="31.194" classname="automationFramework.TestCases.CreateFundingTest" />
       
 </testsuite>

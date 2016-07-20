@@ -18,7 +18,7 @@ public class LinkAccountTest {
 	private static Logger Log = Logger.getLogger(Logger.class.getName());
 	private static final String POST_BALANCE = "$1.00";
 	private static final String INITIAL_BALANCE = "$0.00";
-	private static final String CANCEL_BALANCE = "$0.00";
+	private static final String CANCEL_BALANCE = "$5.00";
 	private static final String DATE = "03/15/2016 10:30 am";
 	private static final String TRANSACTION = "Value Load";
 	private static final String LOCATION = "Customer Service Center";

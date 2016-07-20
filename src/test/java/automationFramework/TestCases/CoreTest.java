@@ -110,6 +110,41 @@ public class CoreTest {
         return driver;
 	}	
  
+ 
+ public WebDriver createCustomer(WebDriver driver, String fname, String lname, String phone, String email ) throws Exception{
+		
+		DashboardPage dashPage = new DashboardPage(driver);
+		dashPage.getLandingPage(Global.URL1);
+		dashPage.clickCustomerTab(driver);
+		dashPage.switchToFrame(driver);
+		CreateCustomerPage nPage = new CreateCustomerPage(driver);
+		nPage.clickSwitch(driver);
+		nPage.clickCreateCustomer(driver);
+		nPage.clickCustomerType(driver, Global.CUSTOMERTYPE);
+		nPage.enterFirstname(driver, fname);
+		nPage.enterLastname(driver, lname);
+		nPage.enterEmail(driver, email);
+		nPage.enterPhone(driver, phone);
+		nPage.clickContinue(driver);
+		
+		NewCustomerPage nPaget = new NewCustomerPage(driver);
+		nPaget.selectContactType(driver, Global.CONTACTTYPE);
+		nPaget.selectCountry(driver);
+		nPaget.enterAddress(driver, Global.ADDRESS );
+		nPaget.enterCity(driver, Global.CITY);
+		nPaget.selectState(driver);
+		nPaget.enterPostalCode(driver, Global.POSTAL);
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,-250)", "");
+		nPaget.selectPhoneType(driver, Global.PHONETYPE);
+		nPaget.selectSecurityQ(driver);
+		nPaget.enterSecuirtyA(driver, Global.SECURITYA);
+		nPaget.enterUserName(driver, Utils.randomUsernameString());
+		nPaget.enterPin(driver, Global.PIN);
+		nPaget.enterDob(driver, Global.DOB);
+		nPaget.clickSubmit(driver);   
+		return driver;
+	}	
+ 
  public WebDriver createOrderSubmit(WebDriver driver, String email) throws Exception{
 			
 	 	createCustomer(driver, email);	

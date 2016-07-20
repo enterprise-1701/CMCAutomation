@@ -31,6 +31,8 @@ public class BasePage {
 			private static final String FINANCE = ".//*[@id='header_financeParent_btn']";
 			private static final String REPORTS = ".//*[@id='header_sapEdge_btn']";
 			private static final String CUSTOMER = "//*[@id='launchPad_customer_btn']/h4";
+			private static final String CUSTOMER_HEADER = "//*[@id='header_customer_btn']";
+			
 			private static final String MONITORING = ".//*[@id='header_monitoringParent_btn']";
 			private static final String LINKACCOUNT = "//*[@id='viewCustomer_linkAccount_lnk']";
 			private static final String CREATE_FUNDINGSOURCE = "//*[@id='viewCustomer_createFundingSource_lnk']";
@@ -116,6 +118,10 @@ public class BasePage {
 	
 	public void clickCustomer(WebDriver driver) throws InterruptedException, AWTException{
 		driver.findElement(By.xpath(CUSTOMER)).click();
+	}
+	
+	public void clickCustomerHeader(WebDriver driver) throws InterruptedException, AWTException{
+		driver.findElement(By.xpath(CUSTOMER_HEADER)).click();
 	}
 	
 	public void clickMonitor(WebDriver driver) throws InterruptedException, AWTException{

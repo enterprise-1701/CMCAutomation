@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="93.847">
+           time="134.195">
   <properties />
   
   
-            <testcase name="createOrderSubmit" time="51.512" classname="automationFramework.TestCases.CreateOrderTest" />
-                <testcase name="createOrderCancel" time="42.335" classname="automationFramework.TestCases.CreateOrderTest" />
+            <testcase name="createOrderSubmit" time="61.153" classname="automationFramework.TestCases.CreateOrderTest" />
+                <testcase name="createOrderCancel" time="73.042" classname="automationFramework.TestCases.CreateOrderTest" />
       
 </testsuite>

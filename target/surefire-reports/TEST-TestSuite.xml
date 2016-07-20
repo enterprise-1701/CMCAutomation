@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="TestSuite" time="14.206" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="TestSuite" time="86.719" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_77\bin"/>
@@ -27,9 +27,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Users\200123\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1455720158856306768.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\200123\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1153038588077110550.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_77/bin/server;C:/Program Files/Java/jre1.8.0_77/bin;C:/Program Files/Java/jre1.8.0_77/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\oracle\product\10.2.0\clientx86_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_77\bin;C:\Program Files\MongoDB\Server\3.2\bin;C:\Program Files\nodejs\;C:\Users\200123\Downloads\gradle-2.13-all\gradle-2.13\bin;C:\dev\bin;C:\cts\jdk8\bin;C:\dev\unix\usr\local\wbin;C:\ProgramData\Oracle\Java\javapath;C:\oracle\product\10.2.0\clientx86_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\apache-maven-3.3.9\bin;C:\Users\200123\AppData\Roaming\npm;C:\Users\200123\AppData\Local\Programs\Git\cmd;C:\Users\200123\Desktop;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_77\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_77/bin/server;C:/Program Files/Java/jre1.8.0_77/bin;C:/Program Files/Java/jre1.8.0_77/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\oracle\product\10.2.0\clientx86_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\apache-maven-3.3.9\bin;C:\Program Files\Java\jdk1.8.0_77\bin;C:\Program Files\MongoDB\Server\3.2\bin;C:\Users\200123\Downloads\gradle-2.13-all\gradle-2.13\bin;C:\dev\bin;C:\cts\jdk8\bin;C:\dev\unix\usr\local\wbin;C:\Program Files\nodejs\;C:\dev\unix\usr\local\wbin;C:\ProgramData\Oracle\Java\javapath;C:\oracle\product\10.2.0\clientx86_1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\apache-maven-3.3.9\bin;C:\Users\200123\AppData\Local\Programs\Git\cmd;C:\Users\200123\AppData\Roaming\npm;C:\Users\200123\Desktop;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,48 +61,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="automationFramework.TestCases.CmcTest" name="createCustomerFundingInvalidCC" time="14.206">
-    <failure message="Cannot locate option with index: 4
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 4
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;NACTS-081729&apos;, ip: &apos;149.63.89.132&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_77&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:186)
-	at automationFramework.PageObjects.CreateFundingPage.selectYear(CreateFundingPage.java:94)
-	at automationFramework.TestCases.CmcTest.createCustomerFundingInvalidCC(CmcTest.java:430)
-</failure>
-    <system-out>Time in Milliseconds: 0 
-Test Case: automationFramework.TestCases.CmcTest 
-Time Stamp: 2016-06-06 14:18:47,589 
-Code Location: automationFramework.TestCases.CmcTest.setUp(CmcTest.java:40) 
-Log Message: Setup Started 
- 
-2016-06-06 14:18:47,589 INFO  [Logger] Setup Started 
-Time in Milliseconds: 135 
-Test Case: automationFramework.TestCases.CmcTest 
-Time Stamp: 2016-06-06 14:18:47,724 
-Code Location: automationFramework.TestCases.CmcTest.setUp(CmcTest.java:41) 
-Log Message: Current OS: Windows 7 Enterprise 
- 
-2016-06-06 14:18:47,724 INFO  [Logger] Current OS: Windows 7 Enterprise 
-Time in Milliseconds: 136 
-Test Case: automationFramework.TestCases.CmcTest 
-Time Stamp: 2016-06-06 14:18:47,725 
-Code Location: automationFramework.TestCases.CmcTest.setUp(CmcTest.java:42) 
-Log Message: Current Browser: firefox.exe 
- 
-2016-06-06 14:18:47,725 INFO  [Logger] Current Browser: firefox.exe 
-Time in Milliseconds: 4780 
-Test Case: automationFramework.TestCases.CmcTest 
-Time Stamp: 2016-06-06 14:18:52,369 
-Code Location: automationFramework.TestCases.CmcTest.setUp(CmcTest.java:45) 
-Log Message: Setup Completed 
- 
-2016-06-06 14:18:52,369 INFO  [Logger] Setup Completed 
-</system-out>
-  </testcase>
+  <testcase classname="automationFramework.TestCases.CreateCustomerDBTest" name="createNewCustomerDB" time="52.863"/>
+  <testcase classname="automationFramework.TestCases.CreateCustomerDBTest" name="createNewCustomerCancelDB" time="33.856"/>
 </testsuite>

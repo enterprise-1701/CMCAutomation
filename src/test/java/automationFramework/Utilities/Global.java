@@ -55,9 +55,9 @@ public class Global {
 	public static final String MONGO = "172.23.4.198";
 	public static final String DB = "test";
 	public static final String COLLECTION = "user";
-	public static final String POSTGRESDB = "jdbc:postgresql://172.23.4.198:5432";
-	public static final String DBUSER = "testuser";
-	public static final String DBPASS = "test";
+	public static final String POSTGRESDB = "jdbc:postgresql://172.23.4.198:5432/test";
+	public static final String POSTGRESUSER = "testuser";
+	public static final String POSTGRESPASS = "postgres";
 	public static final String INVALID_EMAIL = "Invalid email address.";
 	public static final String BAD_PIN = "111";
 	public static final String PIN_ERROR = "Minimum length should be 4";

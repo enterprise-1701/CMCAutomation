@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="50.066">
+           time="74.868">
   <properties />
   
   
-            <testcase name="checkBalanceHistoryDetail" time="30.348" classname="automationFramework.TestCases.BalanceHistoryTest" />
-                <testcase name="checkBalanceHistory" time="19.718" classname="automationFramework.TestCases.BalanceHistoryTest" />
+            <testcase name="checkBalanceHistoryDetail" time="46.112" classname="automationFramework.TestCases.BalanceHistoryTest" />
+                <testcase name="checkBalanceHistory" time="28.756" classname="automationFramework.TestCases.BalanceHistoryTest" />
       
 </testsuite>

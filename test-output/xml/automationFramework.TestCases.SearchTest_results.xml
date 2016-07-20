@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="FirefoxTest"
-           tests="11"
+           tests="12"
            failures="0"
            errors="0"
            skipped="0"
-           time="169.803">
+           time="252.793">
   <properties />
   
   
-            <testcase name="searchCustomerCheckDuplicateTestEmail" time="16.250" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerCheckDuplicateTestAll" time="18.968" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerNoResultsTest" time="12.608" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerInvalidEmail" time="12.800" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerNotVerifiedTest" time="17.983" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerCheckDuplicateTestFname" time="16.877" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerCheckDuplicateTestFnameLname" time="16.128" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerCheckDuplicateTestEmailPhone" time="17.273" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerCheckDuplicateTestLname" time="15.015" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerCheckDuplicateTestPhone" time="16.719" classname="automationFramework.TestCases.SearchTest" />
-                <testcase name="searchCustomerTypeNotSelected" time="9.182" classname="automationFramework.TestCases.SearchTest" />
+            <testcase name="searchCustomerCheckDuplicateTestEmailPhone" time="25.654" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerCheckDuplicateTestEmail" time="22.827" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerCheckDuplicateTestLname" time="19.776" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerInvalidEmail" time="19.836" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerTypeNotSelected" time="19.341" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerCheckDuplicateTestPhone" time="19.360" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerCheckDuplicateTestAll" time="24.653" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerVerifiedTest" time="14.558" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerNoResultsTest" time="22.138" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerCheckDuplicateTestFnameLname" time="20.476" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerNotVerifiedTest" time="25.018" classname="automationFramework.TestCases.SearchTest" />
+                <testcase name="searchCustomerCheckDuplicateTestFname" time="19.156" classname="automationFramework.TestCases.SearchTest" />
       
 </testsuite>
